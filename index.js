@@ -62,5 +62,5 @@ async function pegaArquivo(caminhoDoArquivo) {
       
 }
 
-pegaArquivo('./arquivos/');
+//pegaArquivo('./arquivos/');
 pegaArquivo('./arquivos/texto.md');
