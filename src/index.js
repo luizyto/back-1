@@ -21,7 +21,7 @@ function extraiLinks(texto) {
 
     //console.log(capturas);
     //console.log(resultados);
-    return resultados;
+    return resultados.length!==0?resultados:"Não há links no arquivo";
 
 }
 
@@ -42,9 +42,9 @@ function extraiLinks(texto) {
 // `);
 
 //2)tratamento de erros, função para tratar os erros
-// function trataErro(erro) {
-//     throw new Error(chalk.red(erro.code, "não há arquivo no diretório"));
-// }
+function trataErro(erro) {
+    throw new Error(chalk.red(erro.code, "não há arquivo no diretório"));
+}
 
 // //1) escever uma function que traga arquivos .md
 // function pegaArquivo(caminhoDoArquivo){
@@ -78,7 +78,8 @@ async function pegaArquivo(caminhoDoArquivo) {
     try {
         const encoding = "utf-8";
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
-        console.log(extraiLinks(texto));
+        //1) console.log(extraiLinks(texto));
+        return extraiLinks(texto);
     } catch (erro) {
         trataErro(erro);
     } finally {
@@ -87,5 +88,6 @@ async function pegaArquivo(caminhoDoArquivo) {
 
 }
 export default pegaArquivo;
+
 //  pegaArquivo('./arquivos/texto.md');
 // //pegaArquivo('./arquivos/');
