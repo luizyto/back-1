@@ -7,7 +7,7 @@ Aplicativos necessários para utilizar o código:</br>
 
 A seguir vou passar uma lista de como utilizar o código:
  
-primeiro deve Clonar o repositório clique no botão "Clone" acima ou execute o seguinte comando no seu terminal:</br>
+primeiro deve Clonar o repositório clique no botão "Code" acima ou execute o seguinte comando no seu terminal:</br>
 ```bash
 git clone https://github.com/ProfessorMarcelo2024/back1.git
 ```
