@@ -1,3 +1,5 @@
+
+
 //Comand Line Interface(cli)
 
 import pegaArquivo from "./index.js";
